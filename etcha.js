@@ -1,9 +1,15 @@
 function createSquare() {
   const parentDiv = document.querySelector("#parent-div");
   const square = document.createElement("div");
-  square.style.cssText =
-    "width: 30px; height: 30px; color: blue; border: 1px solid black;";
+  square.style.cssText = "width: 30px; height: 30px; border: 1px solid black;";
   parentDiv.append(square);
+
+  square.addEventListener(
+    "mouseover",
+    () =>
+      (square.style.cssText =
+        "width: 30px; height: 30px; border: 1px solid black; background-color: black;")
+  );
 }
 
 for (let j = 0; j < 16; j++) {
@@ -14,7 +20,7 @@ for (let j = 0; j < 16; j++) {
       const parentDiv = document.querySelector("#parent-div");
       const square = document.createElement("div");
       square.style.cssText =
-        "width: 100px; height: 100px; color: blue; border: 3px solid black;";
+        "width: 100px; height: 100px; border: 3px solid black;";
       const newLine = document.createElement("br");
       parentDiv.append(square);
       square.append(newLine);
