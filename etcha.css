@@ -5,3 +5,11 @@
   flex-wrap: wrap;
   max-width: 540px;
 }
+body {
+  display: flex;
+}
+
+#divInput {
+  margin-right: 20%;
+  margin-left: 5%;
+}
