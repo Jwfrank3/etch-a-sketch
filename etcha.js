@@ -1,12 +1,3 @@
-const button = document.querySelector("button");
-button.addEventListener("click", () => {
-  const input = document.querySelector("#value").value;
-  Number.parseInt(input);
-  console.log(input);
-});
-
-
-
 function createSquare() {
   const parentDiv = document.querySelector("#parent-div");
   const square = document.createElement("div");
@@ -29,7 +20,7 @@ for (let j = 0; j < 16; j++) {
       const parentDiv = document.querySelector("#parent-div");
       const square = document.createElement("div");
       square.style.cssText =
-        "width: 30px; height: 30px; border: 1px solid black;";
+        "width: 100px; height: 100px; border: 3px solid black;";
       const newLine = document.createElement("br");
       parentDiv.append(square);
       square.append(newLine);
