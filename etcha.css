@@ -3,13 +3,15 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 540px;
+  max-width: 512px;
 }
 body {
   display: flex;
+  justify-content: center;
+  background-color: black;
 }
 
 #divInput {
-  margin-right: 20%;
-  margin-left: 5%;
+  display: flex;
+  justify-content: center;
 }

@@ -45,16 +45,21 @@ let hexColor = randomHexColor();
 
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-  const input = document.querySelector("#value").value;
+  let input = prompt();
   const inputValue = Number.parseInt(input);
   generateTable(inputValue);
-  document.querySelector("#value").value = "";
 });
 
-function createSquare() {
+function createSquare(inputValue) {
+  const squareSize = 512 / inputValue + "px";
   const parentDiv = document.querySelector("#parent-div");
   const square = document.createElement("div");
-  square.style.cssText = "width: 30px; height: 30px; border: 1px solid black;";
+  square.style.minHeight = squareSize;
+  square.style.minWidth = squareSize;
+  square.style.backgroundColor = "white";
+  square.style.flex = 1;
+  square.style.border = "1px solid black";
+  square.style.boxSizing = "border-box";
   parentDiv.append(square);
 
   square.addEventListener("mouseover", () => {
@@ -68,7 +73,7 @@ function generateTable(inputValue) {
   if (inputValue <= 100) {
     for (let j = 0; j < inputValue; j++) {
       for (let i = 0; i < inputValue; i++) {
-        createSquare();
+        createSquare(inputValue);
       }
     }
   } else {
